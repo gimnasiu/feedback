@@ -1,0 +1,135 @@
+/* =================================
+   Resetare și Setări Globale
+   ================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { height: 100%; }
+body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #1e4d21;
+}
+
+/* =================================
+   Fundal "Poiana de Smarald"
+   ================================= */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #e6fcf5;
+    background-image: linear-gradient(135deg, #d4f7e8 0%, #a7f0c9 100%);
+    animation: subtle-shift 15s ease-in-out infinite;
+    overflow: hidden;
+}
+
+@keyframes subtle-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* =================================
+   Efect de Litere Zburătoare
+   ================================= */
+.flying-chars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    list-style: none;
+    pointer-events: none;
+}
+.flying-chars li {
+    position: absolute;
+    color: #107543;
+    text-shadow: 0 0 5px rgba(255, 255, 200, 0.8);
+    display: block;
+    bottom: -100px;
+    animation: fly-up 25s linear infinite;
+}
+@keyframes fly-up {
+    0% { transform: translateY(0) rotate(0); }
+    100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
+
+/* =================================
+   Container Formular
+   ================================= */
+.container {
+    background-color: rgba(31, 145, 57, 0.46);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(80, 200, 120, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(10, 40, 20, 0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+/* =================================
+   Elemente Formular
+   ================================= */
+header h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+header .update-notice {
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7rem;
+    margin-bottom: 2rem;
+   }
+
+.form-group { position: relative; margin-bottom: 1.5rem; }
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #b0f5d1;
+    font-weight: 600;
+}
+.form-group input, .form-group textarea {
+    width: 100%; padding: 1rem; border: 1px solid rgba(69, 245, 39, 0.67);
+    border-radius: 8px; transition: all 0.3s ease;
+    /* ▼▼▼ LINIA MODIFICATĂ ESTE AICI ▼▼▼ */
+    background-color: rgba(31, 145, 57, 0.3); /* Fundal mai deschis pentru câmpuri */
+    color: #e6fcf5;
+    font-family: inherit; font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none; border-color: #43ff64d9;
+    box-shadow: 0 0 0 3px rgba(69, 245, 39, 0.67);
+}
+button {
+    width: 100%; padding: 1rem; background: linear-gradient(75deg, #43ff64d9, #1f91394d);
+    color: #333; border: none; border-radius: 8px; cursor: pointer;
+    font-size: 1.1rem; font-weight: bold; transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(31, 145, 57, 0.3);
+}
+button:hover { box-shadow: 0 6px 20px rgba(69, 245, 39, 0.67); transform: translateY(-3px); }
+.language-switcher { text-align: right; margin-bottom: 1rem; }
+.language-switcher a { margin: 0 5px; cursor: pointer; color: #b0f5d1; text-decoration: none; font-weight: bold; transition: color 0.3s ease; }
+.language-switcher a:hover { color: #43ff64d9; }
+.error-message { color: #fc1212; font-size: 0.85em; height: 0; opacity: 0; transition: all 0.3s ease; margin-top: 4px; font-weight: 500; }
+.error-message.visible { height: 1.2em; opacity: 1; }
+.form-group input.error, .form-group textarea.error { border-color: #ff8787; }
+#responseMessage { text-align: center; margin-top: 1rem; font-weight: bold; }
+#responseMessage.success { color: #50faaf; } #responseMessage.error { color: #fc1212; }
+#recaptcha-container { display: flex; justify-content: center; flex-direction: column; align-items: center; }
+#recaptcha-container .g-recaptcha { display: inline-block; }
+@media (max-width: 600px) { .container { padding: 1.5rem; } }

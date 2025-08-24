@@ -1,0 +1,12 @@
+{
+    "formTitle": "Formular de Feedback",
+    "updateNotice": "Scuze! Această pagină deja a fost actualizată/modificată",
+    "nameLabel": "Nume:",
+    "emailLabel": "Email:",
+    "messageLabel": "Mesaj:",
+    "submitButton": "Trimite Feedback",
+    "errorRequired": "Acest câmp este obligatoriu.",
+    "errorEmail": "Adresa de email nu este validă.",
+    "errorCaptcha": "Vă rugăm să completați verificarea reCAPTCHA.",
+    "errorForm": "Vă rugăm corectați erorile din formular."
+}

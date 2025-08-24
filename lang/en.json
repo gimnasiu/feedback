@@ -1,0 +1,12 @@
+{
+    "formTitle": "Feedback Form",
+    "updateNotice": "Sorry! This page has already been updated/modified",
+    "nameLabel": "Name:",
+    "emailLabel": "Email:",
+    "messageLabel": "Message:",
+    "submitButton": "Send Feedback",
+    "errorRequired": "This field is required.",
+    "errorEmail": "The email address is not valid.",
+    "errorCaptcha": "Please complete the reCAPTCHA verification.",
+    "errorForm": "Please correct the errors in the form."
+}

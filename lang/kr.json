@@ -1,0 +1,12 @@
+{
+    "formTitle": "피드백 양식",
+    "updateNotice": "죄송합니다. 이 페이지는 이미 업데이트/수정되었습니다.",
+    "nameLabel": "이름:",
+    "emailLabel": "이메일:",
+    "messageLabel": "메시지:",
+    "submitButton": "피드백 보내기",
+    "errorRequired": "이 필드는 필수입니다.",
+    "errorEmail": "이메일 주소가 유효하지 않습니다.",
+    "errorCaptcha": "reCAPTCHA 인증을 완료해 주세요.",
+    "errorForm": "양식의 오류를 수정해 주세요."
+}
